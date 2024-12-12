@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
+  background-color: rgb(255, 130, 151);
 }
 
 nav {
@@ -16,24 +16,24 @@ nav {
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+  border-bottom: solid 1px rgb(248, 109, 248);
+  background-color: rgb(248, 109, 248);
 }
 
 nav a {
   display: inline-block;
   min-width: 9rem;
   padding: 0.5rem;
-  border-radius: 0.2rem;
-  border: solid 1px #aaa;
+  border-radius: 20px;
+  border: solid 1px rgb(188, 112, 255);
   text-align: center;
   text-decoration: none;
-  color: #555;
+  color: purple;
 }
 
 nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+  color: #fff;
+  background-color: rgb(235, 63, 120)
 }
 
 main {
@@ -43,4 +43,19 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-link {
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 8px;
+  color: #212121;
+  text-decoration: none;
+  border: 2px solid #212121;
+  margin-top: 5px;
 }

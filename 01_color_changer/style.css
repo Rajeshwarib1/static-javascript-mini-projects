@@ -1,0 +1,38 @@
+html {
+    margin: 0;
+  }
+  
+  span {
+    display: block;
+  }
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  #magenta {
+    background: rgb(242, 91, 219);
+    cursor: pointer;
+  }
+  
+  #white {
+    background: rgb(255, 255, 233);cursor: pointer;
+  }
+  #blue {
+    background: rgb(101, 101, 254);cursor: pointer;
+  }
+  #yellow {
+    background: rgb(254, 254, 51);cursor: pointer;
+  }
+  
