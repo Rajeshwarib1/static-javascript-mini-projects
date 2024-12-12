@@ -8,48 +8,63 @@
     align-items: center;
     align-content: center;
     align-self: auto;
+    margin-left: 30%;
+    margin-top: 2%;
+  }
+  .heading{
+    color: rgb(156, 65, 247);
+    margin-left: 100px;
+    margin-top: -200px;
   }
   form{
-
+    height: 300px;
+    width: 300px;
     color: rgb(156, 65, 247);
-    background-color: pink;
-    padding-left: 30px;
-    display: block;
+    background-color: plum;
+    display: inline-block;
     align-items: center;
     align-content: center;
+    margin-left: 70px;
+    padding-left: 20px;
   }
   #height,
   #weight {
     width: 150px;
     height: 25px;
     margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 100px;
+    border-color: #fff;
   }
   
   #weight-guide {
-    margin-left: 75px;
-    margin-top: 25px;
+    display: block;
+    align-items: center;
+    padding-top: 50px;
   }
   
   #results {
     font-size: 35px;
     margin-left: 90px;
     margin-top: 20px;
-    color: rgb(241, 241, 241);
+    color: rgb(227, 12, 155);
     display: flex;
+    align-items: center;
   }
   
   button {
     width: 150px;
     height: 35px;
-    margin-left: 90px;
-    margin-top: 25px;
-    background-color: #fff;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: rgb(227, 12, 155);
     padding: 1px 30px;
-    border-radius: 8px;
-    color: #212121;
+    border-radius: 100px;
     text-decoration: none;
-    border: 2px solid #212121;
-  
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
     font-size: 25px;
   }
   
