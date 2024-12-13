@@ -1,4 +1,4 @@
-General Reset
+/* General Reset */
 html, body {
     margin: 0;
     padding: 0;
@@ -13,25 +13,23 @@ html, body {
 
 /* Main Wrapper */
 #wrapper {
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     background: linear-gradient(145deg, #29293a, #1c1c2d);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     text-align: center;
-    color: #fff;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 400px;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Title */
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #ffc857;
     margin-bottom: 15px;
+    animation: glowText 2s infinite alternate;
 }
 
 /* Paragraphs */
@@ -39,6 +37,7 @@ p {
     font-size: 1rem;
     margin: 10px 0;
     line-height: 1.5;
+    animation: fadeIn 1.5s ease-in;
 }
 
 /* Input Field */
@@ -55,11 +54,12 @@ p {
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
     outline: none;
     transition: all 0.3s ease;
-    margin: 5px;
+    animation: popIn 0.5s ease-in-out;
 }
 
 #guessField:focus {
     box-shadow: 0 0 8px #ffc857;
+    animation: pulse 0.8s infinite alternate;
 }
 
 /* Submit Button */
@@ -73,14 +73,15 @@ p {
     width: 100%;
     height: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 5px;
-    width: 200px;
+    margin: 5px auto;
+    max-width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #subt:hover {
     background-color: #e0a93a;
     transform: scale(1.05);
+    animation: subtleGlow 1.5s infinite alternate;
 }
 
 /* Result Section */
@@ -92,11 +93,20 @@ p {
     background-color: #29293a;
     border-radius: 8px;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.resultParas span {
+/* Feedback for correct/wrong guesses */
+.correctGuess {
+    color: #6ab04c;
     font-weight: bold;
-    color: #ffc857;
+    animation: correctBounce 0.8s ease-out;
+}
+
+.wrongGuess {
+    color: #ff6f61;
+    font-weight: bold;
+    animation: shake 0.5s ease-in-out;
 }
 
 /* Previous Guesses and Remaining Guesses */
@@ -109,6 +119,7 @@ p {
 .guesses {
     font-size: 1rem;
     color: #6ab04c;
+    animation: fadeIn 1s ease;
 }
 
 /* New Game Button */
@@ -122,29 +133,96 @@ p {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #newGame:hover {
-    background-color: #5a4bcf;
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.8);
 }
 
-/* Navigation Bar */
-nav {
-    text-align: center;
-    margin-bottom: 20px;
+/* Animations */
+
+/* Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-nav a {
-    color: #ffc857;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+/* Glow Text Animation */
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px #ffc857, 0 0 20px #ffc857, 0 0 30px #ff9f43;
+    }
+    to {
+        text-shadow: 0 0 5px #ffc857, 0 0 15px #e0a93a, 0 0 25px #e056fd;
+    }
 }
 
-nav a:hover {
-    color: #e0a93a;
+/* Pop In */
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Subtle Glow Animation */
+@keyframes subtleGlow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 200, 87, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 200, 87, 0.8);
+    }
+}
+
+/* Correct Bounce */
+@keyframes correctBounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Shake Effect */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
 }
